@@ -108,6 +108,78 @@ FROM products
                 "
                          v-bind:setGuess='setGuess'> </Example>
 
+                <Example query="
+SELECT event, hour, 
+      hour - LAG(hour) OVER(
+        PARTITION BY event
+        ORDER BY hour ASC)
+       AS time_since_last
+FROM baby_log
+WHERE event IN ('feeding', 'diaper')
+ORDER BY hour ASC
+
+                "
+                         v-bind:setGuess='setGuess'> </Example>
+
+                <Example query="
+SELECT customer
+       , COALESCE(
+          mailing_state,
+          billing_state,
+          ip_address_state
+       ) AS state
+FROM addresses
+"
+                         v-bind:setGuess='setGuess'> </Example>
+
+                <Example query="
+SELECT first_name, age, CASE
+  WHEN age < 13 THEN 'child'
+  WHEN age < 20 THEN 'teenager'
+  ELSE 'adult' END as age_range
+FROM people
+"
+                         v-bind:setGuess='setGuess'> </Example>
+
+                <Example query="
+SELECT genus,
+       COUNT(DISTINCT species)
+FROM plants
+GROUP BY 1
+ORDER BY 2 DESC
+"
+                         v-bind:setGuess='setGuess'> </Example>
+                <Example query="
+SELECT owner
+FROM dogs
+WHERE name in (
+  SELECT name
+  FROM dogs
+  GROUP BY name
+  HAVING count(*) > 2)
+"
+                         v-bind:setGuess='setGuess'> </Example>
+
+
+
+                <Example query="
+SELECT owner
+, SUM(CASE 
+    WHEN type = 'dog' THEN 1 
+    ELSE 0 END) AS num_dogs
+, SUM(CASE 
+    WHEN type = 'cat' THEN 1
+    ELSE 0 END) AS num_cats
+, SUM(CASE
+    WHEN type NOT IN ('dog', 'cat') THEN 1
+    ELSE 0 END) AS num_other
+FROM pets
+GROUP BY owner
+"
+                         v-bind:setGuess='setGuess'> </Example>
+
+
+
             </div>
         </div>
     </div>
