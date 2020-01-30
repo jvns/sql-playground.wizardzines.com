@@ -1,7 +1,7 @@
 <template>
     <div class="mx-8">
     <div class="flex flex-col content-center m-0 m-auto">
-        <h1 align="center" class="text-3xl my-8">★ SQL playground ★</h1>
+        <h1 align="center" class="text-2xl md:text-3xl my-8">★ SQL playground ★</h1>
         <p class="mb-4">
         This playground is an accompaniment to <a class="text-pink-800"
             href="https://wizardzines.com/zines/sql">Become a SELECT Star!</a>.
