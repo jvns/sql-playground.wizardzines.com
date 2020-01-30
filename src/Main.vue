@@ -42,7 +42,7 @@
         </div>
         <div class="md:pl-8">
             <h2 class="text-2xl pb-4">Examples</h2>
-            <div class="md:h-screen md:text-sm md:overflow-scroll md:px-2 md:bg-gray-100 md:rounded-lg" id="examples">
+            <div class="text-sm overflow-scroll px-2 bg-gray-100 rounded-lg" id="examples">
                 <Example query="
 SELECT * from cats
 WHERE name = 'daisy'
@@ -235,7 +235,6 @@ export default class Main extends App {
     setGuess(query: string) {
         this.guess = {query: query};
         this.runQuery(null);
-        scrollTo(0, 0);
     }
 
     async runQuery(event: any) {
