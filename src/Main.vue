@@ -42,7 +42,7 @@
         </div>
         <div class="md:pl-8">
             <h2 class="text-2xl pb-4">Examples</h2>
-            <div class="text-sm overflow-scroll px-2 bg-gray-100 rounded-lg" id="examples">
+            <div class="text-xs md:text-sm overflow-scroll px-2 bg-gray-100 rounded-lg" id="examples">
                 <Example query="
 SELECT * from cats
 WHERE name = 'daisy'
