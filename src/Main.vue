@@ -149,18 +149,6 @@ GROUP BY 1
 ORDER BY 2 DESC
 "
                          v-bind:setGuess='setGuess'> </Example>
-                <Example query="
-SELECT owner
-FROM dogs
-WHERE name in (
-  SELECT name
-  FROM dogs
-  GROUP BY name
-  HAVING count(*) > 2)
-"
-                         v-bind:setGuess='setGuess'> </Example>
-
-
 
                 <Example query="
 SELECT owner
@@ -175,6 +163,16 @@ SELECT owner
     ELSE 0 END) AS num_other
 FROM pets
 GROUP BY owner
+"
+                         v-bind:setGuess='setGuess'> </Example>
+                <Example query="
+SELECT owner
+FROM dogs
+WHERE name in (
+  SELECT name
+  FROM dogs
+  GROUP BY name
+  HAVING count(*) > 2)
 "
                          v-bind:setGuess='setGuess'> </Example>
 
