@@ -1,4 +1,4 @@
-# sqlschool.wizardzines.com
+# sql-playground.wizardzines.com
 
 ## Project setup
 ```
