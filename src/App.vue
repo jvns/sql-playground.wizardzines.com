@@ -11,8 +11,6 @@ import { Component, Vue } from 'vue-property-decorator';
 import Table from './components/Table.vue';
 const initSqlJs = require('sql.js');
 import { Database } from '@/database';
-import { firebase } from '@firebase/app';
-import '@firebase/firestore'
 
 @Component({
     components: {
@@ -30,24 +28,8 @@ export default class App extends Vue {
         );
     }
 
-    firebase() {
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyCEbH_2zf9dDzh6Muq-DdK3byHMUIsHfCA",
-            authDomain: "wizard-sql-school.firebaseapp.com",
-            databaseURL: "https://wizard-sql-school.firebaseio.com",
-            projectId: "wizard-sql-school",
-            storageBucket: "",
-            messagingSenderId: "779622015462",
-            appId: "1:779622015462:web:b0ca93a1d5fbb1ea2d3627"
-        };
-        firebase.initializeApp(firebaseConfig);
-        // @ts-ignore
-        Vue.prototype.$firedb = firebase.firestore();
-    }
 
     async created() {
-        this.firebase()
         if (!localStorage.getItem('uuid')) {
             localStorage.setItem('uuid', this.uuidv4());
         }
