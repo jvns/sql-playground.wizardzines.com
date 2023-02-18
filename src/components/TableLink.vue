@@ -1,7 +1,7 @@
 <template>
     <button 
         href='#'
-        class="text-mono text-pink-800 border-b border-dotted border-pink-700"
+        class="plausible-event-name=click-table text-mono text-pink-800 border-b border-dotted border-pink-700"
         v-on:click="setGuess('select * from ' + table)">
         {{table}}</button>
 </template>

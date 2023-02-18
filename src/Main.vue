@@ -34,7 +34,7 @@
                           text-gray-700 leading-tight focus:outline-none
                           focus:shadow-outline" id="query" placeholder="SELECT ... FROM .... WHERE ... GROUP BY ... HAVING ... ORDER BY ... LIMIT ...">
                 </textarea>
-                <button v-on:click="runQuery" class="bg-pink-800 text-pink-100 hover:bg-pink-500  hover:text-pink-100 mb-2 font-bold py-2 px-4 rounded text-left">
+                <button v-on:click="runQuery" class="plausible-event-name=run-query bg-pink-800 text-pink-100 hover:bg-pink-500  hover:text-pink-100 mb-2 font-bold py-2 px-4 rounded text-left">
                     Run query
                 </button>
             </div>
