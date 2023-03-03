@@ -20,6 +20,7 @@
 <TableLink table=owners v-bind:setGuess='setGuess'></TableLink>,
 <TableLink table=pets v-bind:setGuess='setGuess'></TableLink>,
 <TableLink table=people v-bind:setGuess='setGuess'></TableLink>,
+<TableLink table=plants v-bind:setGuess='setGuess'></TableLink>,
 <TableLink table=products v-bind:setGuess='setGuess'></TableLink>,
 <TableLink table=sales v-bind:setGuess='setGuess'></TableLink>,
 <TableLink table=users v-bind:setGuess='setGuess'></TableLink>
