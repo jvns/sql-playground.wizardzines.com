@@ -1,3 +1,3 @@
 set -eux
 npm install esbuild
-bash build.sh
+bash scripts/build.sh

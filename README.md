@@ -7,7 +7,7 @@ Install [esbuild](https://esbuild.github.io/)
 ### Build site
 
 ```
-bash build.sh
+bash scripts/build.sh
 ```
 
 ### View site
