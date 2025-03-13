@@ -4,28 +4,28 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/tailwind.min.css" />
+    <link rel="stylesheet" href="/static/tailwind.min.css" />
     <script
       defer
       data-domain="sql-playground.wizardzines.com"
       src="https://plausible.io/js/script.tagged-events.js"
     ></script>
-    <title><%= htmlWebpackPlugin.options.title %></title>
-<style type="text/css">
-#examples {
-    max-height: 25em;
-}
-</style>
-
+    <title>SQL Playground</title>
+    <style type="text/css">
+      #examples {
+        max-height: 25em;
+      }
+    </style>
   </head>
   <body>
     <noscript>
       <strong>This site doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div style="max-width: 1000px" class="flex flex-col content-center m-0 m-auto">
-        <div id="app">
-        </div>
+      <div id="app"></div>
     </div>
-    <!-- built files will be auto injected -->
+    <script src="/static/sql-wasm.js"></script>
+    <script src="/static/vue.global.js"></script>
+    <script src="/bundle.js"></script>
   </body>
 </html>

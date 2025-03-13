@@ -1,18 +1,20 @@
-# sqlschool.wizardzines.com
+# sql-playground.wizardzines.com
 
-## Project setup
-```
-npm install
-```
+## Setup
 
-### Compiles and hot-reloads for development
-```
-python start-local-server.py
-vue-cli-service serve
-```
+Install [esbuild](https://esbuild.github.io/)
 
-### Compiles and minifies for production
+### Build site
+
 ```
-npm run build
+bash build.sh
 ```
 
+### View site
+
+```
+cd public
+python3 -m http.server 8080
+```
+
+Then open http://localhost:8080

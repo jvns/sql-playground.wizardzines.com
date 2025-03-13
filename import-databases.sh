@@ -1,3 +1,3 @@
 set -eux
-rm -f public/db.sqlite
-sqlite3 public/db.sqlite < databases/import.sql
+rm -f static/db.sqlite
+sqlite3 static/db.sqlite < databases/import.sql
