@@ -10,6 +10,11 @@ Install [esbuild](https://esbuild.github.io/)
 bash scripts/build.sh
 ```
 
+### Live reload
+
+* Install `entr`
+* Run `bash scripts/watch.sh`
+
 ### View site
 
 ```
